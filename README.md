@@ -4,8 +4,8 @@ BeagleBoneGPIO
 C++ Beagle Bone GPIO library
 
 
-Why C++ over C?
----------------
+### Why C++ over C?
+
 
 BeagleBone chips are not 8-bit microcontrollers.  They are fully-fledged computers running a 32-bit operating systems.  Taking advantage of the features granted by C++ enables the library to be much more easily used and expressive, while still making optimizations that are not easily available in C.  
 
