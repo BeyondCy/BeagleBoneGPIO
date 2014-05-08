@@ -11,6 +11,16 @@ C++11 Beagle Bone GPIO library
 
 There is a simple [test driver that oscillates an output](https://github.com/zerosum0x0/BeagleBoneGPIO/blob/master/main.cpp) pin between high and low every 1 second.
 
+#### License
+BBGPIO is released under the wutdoPL v1.0
+
+           DO WHAT YOU WANNA WUTDO PUBLIC LICENSE
+                   Version 1.0, May 2014
+
+Copyright (C) 2014 zerosum0x0 <zerosum0x0@gmail.com>
+       TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+ 0. You just DO WHAT YOU WANNA WUTDO.
 
 #### Why C++ over C?
 Taking advantage of the features granted by C++ enables the library to be much more easily used and expressive, while still making optimizations that are not easily available in C.  BeagleBone chips are not 8-bit microcontrollers, they're fully-fledged computers running 32-bit operating systems.  
