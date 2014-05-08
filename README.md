@@ -5,7 +5,9 @@ C++11 Beagle Bone GPIO library
 
 #### Usage
 
-Include "BBGPIO/BBGPIO.h" in your project.  Use the PinFactory class to create Pin objects (which are automatically freed for you).  Read or write to the Pin as needed.
+1. include "BBGPIO/BBGPIO.h" in your project.  
+2. Use static methods of the PinFactory class to create Pin objects (which are automatically freed for you).  
+3. Read or write to the Pin as needed.
 
 There is a simple [test driver that oscillates an output](https://github.com/zerosum0x0/BeagleBoneGPIO/blob/master/main.cpp) pin between high and low every 1 second.
 
