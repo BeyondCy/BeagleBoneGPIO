@@ -34,32 +34,43 @@ namespace BBGPIO
 		if (index > PIN_MAX)
 			return 0;
 
-		if (PinFactory::pins.find(index) != PinFactory::pins.end())
+		if (this->pins.find(index) != this->pins.end())
 			return pins[index];
 
 		Pin* pin = new Pin(PinDefaults[index]);
-		PinFactory::pins[index] = pin;
+		this->pins[index] = pin;
 
 		return pin;
 	}
 
 	void PinFactory::reclaim(Pin* pin)
 	{
-		uint8_t key = static_cast<uint8_t>(pin->slot());
-
-		if (PinFactory::pins.find(key) != PinFactory::pins.end())
-		{
-			delete PinFactory::pins[key];
-			PinFactory::pins.erase(key);
-		}
+		PinFactory::getInstance().destroy(pin);
 	}
 
 	void PinFactory::reclaimAll()
 	{
-		for (auto kv : PinFactory::pins)
+		PinFactory::getInstance().destroyAll();
+	}
+
+	void PinFactory::destroy(Pin* pin)
+	{
+		uint8_t key = static_cast<uint8_t>(pin->slot());
+
+		if (this->pins.find(key) != this->pins.end())
+		{
+			delete this->pins[key];
+			this->pins.erase(key);
+		}
+	}
+
+	void PinFactory::destroyAll()
+	{
+
+		for (auto kv : this->pins)
 			delete kv.second;
 
-		PinFactory::pins.clear();
+		this->pins.clear();
 	}
 
 	PinInfo PinFactory::PinDefaults[] =
