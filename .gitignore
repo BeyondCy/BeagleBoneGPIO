@@ -1,3 +1,12 @@
+#build folders
+Debug/
+Bin/
+Release/
+
+#Qt files
+*.pro
+*.user
+
 # Compiled Object files
 *.slo
 *.lo
@@ -19,3 +28,9 @@
 *.exe
 *.out
 *.app
+BBGPIO/BBGPIO.vcxproj
+BBGPIO/BBGPIO.vcxproj.filters
+BBGPIO.opensdf
+BBGPIO.sdf
+BBGPIO.sln
+BBGPIO.v12.suo
