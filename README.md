@@ -17,7 +17,8 @@ BBGPIO is released under the wutdoPL v1.0
            DO WHAT YOU WANNA WUTDO PUBLIC LICENSE
                    Version 1.0, May 2014
 
-    Copyright (C) 2014 zerosum0x0 <zerosum0x0@gmail.com>
+      Copyright (C) 2014 zerosum0x0 <zerosum0x0@gmail.com>
+    
         TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
     0. You just DO WHAT YOU WANNA WUTDO.
