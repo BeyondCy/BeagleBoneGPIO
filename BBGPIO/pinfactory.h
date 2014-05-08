@@ -25,9 +25,14 @@ namespace BBGPIO
 		static PinFactory& getInstance();
 
 		Pin* fetchPin(uint8_t key, uint8_t direction);
+		void destroy(Pin* pin);
+		void destroyAll();
 
 
 		static std::unordered_map<uint8_t, Pin*> pins;
+
+		static const uint8_t PIN_MAX = 97;
+		static PinInfo PinDefaults[PIN_MAX];
 	};
 
 }

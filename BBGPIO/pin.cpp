@@ -87,12 +87,12 @@ namespace BBGPIO
 		return this->direction() == PinDirection::OUTPUT;
 	}
 
-	void Pin::setHigh() const
+	void Pin::setInput() const
 	{
 		this->setDirection(PinDirection::INPUT);
 	}
 
-	bool Pin::isHigh() const
+	bool Pin::isInput() const
 	{
 		return this->direction() == PinDirection::INPUT;
 	}
