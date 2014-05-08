@@ -1,6 +1,6 @@
-#include <iostream>
 #include <chrono>
 #include <thread>
+
 #include "BBGPIO/BBGPIO.h"
 
 // This will send a signal oscillating high/low every 1 second
