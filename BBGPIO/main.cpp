@@ -1,10 +1,11 @@
 #include <iostream>
+#include "pinfactory.h"
 
-using namespace std;
-
-int main()
+int main(int argc, char* argv[])
 {
-    cout << "Hello World!" << endl;
-    return 0;
+	using namespace BBGPIO;
+	PinFactory::reclaimAll();
+	
+	return 0;
 }
 
