@@ -11,12 +11,12 @@ namespace BBGPIO
 		pinInfo(info)
 	{
 		this->setPaths();
-		this->export();
+		this->exportPin();
 	}
 
 	Pin::~Pin()
 	{
-		this->unexport();
+		this->unexportPin();
 	}
 
 	void Pin::setPaths()
@@ -28,13 +28,13 @@ namespace BBGPIO
 		this->valuePath += "/gpio" + std::to_string(this->pinInfo.gpio) + "/value";
 	}
 
-	void Pin::export()
+	void Pin::exportPin()
 	{
 		std::ofstream kernel(Pin::GPIO_EXPORT);
 		kernel << this->pinInfo.gpio;
 	}
 
-	void Pin::unexport()
+	void Pin::unexportPin()
 	{
 		std::ofstream kernel(Pin::GPIO_UNEXPORT);
 		kernel << this->pinInfo.gpio;

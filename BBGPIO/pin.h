@@ -39,8 +39,8 @@ namespace BBGPIO
 
 	protected:
 		void setPaths();
-		void export();
-		void unexport();
+		void exportPin();
+		void unexportPin();
 
     private:
         PinInfo pinInfo;
