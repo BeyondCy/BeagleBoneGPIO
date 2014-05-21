@@ -1,4 +1,4 @@
-#include "PinFactory.h"
+#include "pinfactory.h"
 
 namespace BBGPIO
 {
