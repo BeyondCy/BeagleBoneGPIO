@@ -2,6 +2,7 @@
 #include <thread>
 
 #include <iostream>
+#include <string>
 
 #include "BBGPIO/BBGPIO.h"
 
@@ -15,7 +16,9 @@ int main(int argc, char* argv[])
 	{
 		p9_11->isHigh() ? p9_11->setLow() : p9_11->setHigh();
 		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-		std::cout << p9_11->isHigh() ? "High" : "Low" << std::endl;
+
+		std::string output = p9_11->isHigh() ? "High" : "Low";
+		std::cout << output << std::endl;
 	}
 
 	return 0;
