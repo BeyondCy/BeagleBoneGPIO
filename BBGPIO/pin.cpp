@@ -31,13 +31,13 @@ namespace BBGPIO
 	void Pin::exportPin()
 	{
 		std::ofstream kernel(Pin::GPIO_EXPORT);
-		kernel << this->pinInfo.gpio;
+		kernel << (int) this->pinInfo.gpio;
 	}
 
 	void Pin::unexportPin()
 	{
 		std::ofstream kernel(Pin::GPIO_UNEXPORT);
-		kernel << this->pinInfo.gpio;
+		kernel << (int) this->pinInfo.gpio;
 	}
 
 	void Pin::setLow() const
